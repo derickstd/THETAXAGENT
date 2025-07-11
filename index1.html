@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Tax Consultant - Expert Tax Solutions for Uganda</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #03aafe;
+        --secondary: #050eff;
+        --accent: #efff13;
+        --light: #f5f9ff;
+        --dark: #080344;
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(
+            120deg,
+            rgba(8, 49, 228, 0.576) 0%,
+            rgba(3, 145, 95, 0.85) 100%
+          ),
+          url(URA.jpg) no-repeat center center/cover fixed;
+        color: #333;
+        line-height: 1.6;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      /* Floating WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: var(--transition);
+        animation: pulse 2s infinite;
+      }
+
+      .whatsapp-float:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+
+      /* Navbar */
+      header {
+        background: rgba(29, 174, 218, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        transition: var(--transition);
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .logo img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .logo:hover {
+        transform: translateY(-5px);
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        transition: var(--transition);
+        position: relative;
+        z-index: 10;
+        margin: 0;
+      }
+
+      .nav-links li {
+        position: relative;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 25px 20px;
+        color: var(--dark);
+        text-decoration: none;
+        font-weight: 600;
+        transition: var(--transition);
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+        background-color: #adc2f5;
+        padding: 25px 20px;
+        transition: var(--transition);
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 3px;
+        background: var(--accent);
+        transition: var(--transition);
+        transform: translateX(-50%);
+      }
+
+      .nav-links a:hover::after {
+        width: 80%;
+      }
+
+      .nav-links .active a {
+        color: var(--primary);
+      }
+
+      .nav-links .active a::after {
+        width: 80%;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        font-size: 1.8rem;
+        color: var(--dark);
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 100px 5% 80px;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(5, 30, 66, 0.7);
+        z-index: 0;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        color: white;
+
+        padding: 20px;
+        animation: fadeIn 1s ease;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+      }
+
+      .hero-text {
+        animation: fadeInUp 1s ease;
+      }
+
+      .hero-text h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .hero-text p {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 35px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        font-size: 1.1rem;
+        border: 2px solid transparent;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        color: rgb(23, 22, 22);
+        box-shadow: 0 4px 15px rgb(15, 15, 15);
+      }
+
+      .btn-primary:hover {
+        background: #004cff;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(8, 8, 8, 0.977);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-3px);
+      }
+
+      .hero-contact {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 30px;
+        animation: fadeIn 1.2s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-contact h3 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        position: relative;
+        padding-bottom: 15px;
+      }
+
+      .hero-contact h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: var(--accent);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 12px;
+        transition: var(--transition);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .contact-item:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateX(5px);
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+      }
+
+      .contact-text {
+        flex: 1;
+      }
+
+      .contact-text h4 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+      }
+
+      .contact-text p,
+      .contact-text a {
+        color: #eee;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .contact-text a:hover {
+        color: var(--accent);
+      }
+
+      /* Main Content Sections */
+      .section {
+        padding: 100px 5%;
+        background: linear-gradient(
+          120deg,
+          rgba(191, 202, 255, 0.1) 0%,
+          rgba(6, 127, 240, 0.1) 100%
+        );
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        color: var(--dark);
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 2px;
+      }
+
+      .section-title p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        color: #ffffff;
+      }
+
+      /* Services Section */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        animation: fadeInUp 1.5s ease;
+      }
+
+      .service-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 5.08);
+        transition: var(--transition);
+        transform: translateY(0);
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-icon {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+        color: var(--primary);
+        background: rgba(29, 174, 218, 0.1);
+      }
+
+      .service-content {
+        padding: 30px;
+      }
+
+      .service-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: var(--dark);
+      }
+
+      .service-content p {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .service-link {
+        display: inline-flex;
+        align-items: center;
+        color: var(--primary);
+        font-weight: 600;
+        text-decoration: none;
+        gap: 8px;
+        transition: var(--transition);
+      }
+
+      .service-link:hover {
+        color: var(--accent);
+        gap: 12px;
+      }
+
+      /* FAQ Section */
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .faq-item {
+        margin-bottom: 20px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transition: var(--transition);
+      }
+
+      .faq-item.active {
+        box-shadow: 0 6px 20px rgba(9, 50, 236, 0.15);
+      }
+
+      .faq-question {
+        padding: 20px 25px;
+        background: #f8faff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--dark);
+        transition: var(--transition);
+      }
+
+      .faq-question:hover {
+        background: #8aaae9;
+      }
+
+      .faq-toggle {
+        transition: var(--transition);
+      }
+
+      .faq-item.active .faq-toggle {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 25px;
+        background: #8aaae9;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 500px;
+        padding: 25px;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--dark);
+        color: white;
+        padding: 60px 5% 30px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto 50px;
+      }
+
+      .footer-col h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-col h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--accent);
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: #bbb;
+        text-decoration: none;
+        transition: var(--transition);
+        display: inline-block;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent);
+        transform: translateX(5px);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .social-link:hover {
+        background: var(--accent);
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.95rem;
+        color: #aaa;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-buttons {
+          justify-content: center;
+        }
+
+        .hero-contact {
+          max-width: 500px;
+          margin: 0 auto;
+        }
+
+        .section-title h2 {
+          font-size: 2.2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 80px;
+          left: -100%;
+          flex-direction: column;
+          background: white;
+          width: 100%;
+          text-align: center;
+          transition: var(--transition);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links.active {
+          left: 0;
+        }
+
+        .nav-links li {
+          margin: 0;
+        }
+
+        .nav-links a {
+          padding: 20px;
+        }
+
+        .hero-text h1 {
+          font-size: 2.8rem;
+        }
+
+        .hero-text p {
+          font-size: 1.1rem;
+        }
+
+        .btn {
+          padding: 12px 25px;
+          font-size: 1rem;
+        }
+
+        .faq-container {
+          padding: 30px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-text h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .section {
+          padding: 70px 5%;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        background: rgba(8, 3, 68, 0.7);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background: #fff;
+        margin: auto;
+        padding: 40px 30px;
+        border-radius: 18px;
+        max-width: 400px;
+        width: 90%;
+        position: relative;
+        box-shadow: 0 8px 40px rgba(30, 174, 218, 0.18);
+        animation: fadeIn 0.5s;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 18px;
+        right: 22px;
+        font-size: 2rem;
+        color: #03aafe;
+        cursor: pointer;
+        font-weight: bold;
+        transition: color 0.2s;
+      }
+
+      .modal-close:hover {
+        color: #050eff;
+      }
+
+      #questionnaire-form label {
+        display: block;
+        margin-top: 18px;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #080344;
+      }
+
+      #questionnaire-form input,
+      #questionnaire-form select,
+      #questionnaire-form textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #eee;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        background: #f8faff;
+      }
+
+      #questionnaire-form textarea {
+        resize: vertical;
+      }
+
+      /* End of Modal Styles */
+    </style>
+  </head>
+  <body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/256751474334" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="taxman256" />
+          The Tax Agent
+        </a>
+
+        <ul class="nav-links">
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Expert Tax Solutions for Uganda</h1>
+          <p>
+            Get professional help with URA taxes, compliance, and planning. We
+            make tax easy for individuals and businesses throughout Uganda.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">Our Services</a>
+            <a href="#contact" class="btn btn-secondary">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="hero-contact">
+          <h3>Contact Information</h3>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <a href="tel:+256785230670">+256 785 230670</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <a href="mailto:taxissues.go@gmail.com">taxissues.go@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="contact-text">
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/256751474334" target="_blank"
+                >+256 751 474334</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="section-title">
+        <h2>About Us</h2>
+        <p>
+          The Tax Agent is a team of experienced tax professionals dedicated to
+          helping Ugandan individuals and businesses navigate tax compliance,
+          Filleing returns, and dispute resolution. Our mission is to simplify
+          taxes and provide expert guidance every step of the way.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+      <div class="section-title">
+        <h2>Our Services</h2>
+        <p>
+          Comprehensive tax solutions tailored for individuals and businesses in
+          Uganda
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <img
+              src="images/URA-logo.png"
+              alt="URA Logo"
+              style="height: 120px; max-width: 100%; object-fit: contain"
+            />
+          </div>
+          <div class="service-content">
+            <h3>Tax Compliance</h3>
+            <p>
+              Ensure full compliance with URA regulations. We handle all
+              filings, submissions, and documentation required by Uganda Revenue
+              Authority.
+            </p>
+            <a href="#" class="service-link">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img
+              src="images/POS.png"
+              alt="URSB Logo"
+              style="height: 120px; max-width: 100%; object-fit: contain"
+            />
+          </div>
+          <div class="service-content">
+            <h3>EFRIS</h3>
+            <p>
+              We offer expert guidance on EFRIS-Electronic Fiscal Recipting and
+              Inoicing Solutions, a tax tool that helps in generating and
+              managing electronic invoices compliant with URA standards. Our
+              team ensures you leverage EFRIS to optimize your compliance
+              processes.
+            </p>
+            <a href="#" class="service-link">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img
+              src="images/URA-logo.png"
+              alt="URA Logo"
+              style="height: 120px; max-width: 100%; object-fit: contain"
+            />
+          </div>
+          <div class="service-content">
+            <h3>Tax Filings</h3>
+            <p>
+              We are dedicated to helping individuals and businesses navigate
+              complex tax filings and compliance processes. Here we ensure
+              accurate and timely submission of all tax returns, including
+              Income Tax, VAT, PAYE, and more.
+            </p>
+            <a href="#" class="service-link">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img
+              src="images/exports.png"
+              alt="URA Logo"
+              style="height: 120px; max-width: 100%; object-fit: contain"
+            />
+          </div>
+          <div class="service-content">
+            <h3>cutoms imports and exports</h3>
+            <p>
+              we deliver more than just a service but a comprehensive solution
+              for managing your imports and exports. discover the quickest ways
+              of clearing your goods through customs with our expert guidance.
+              we handle all customs documentation, valuation, and compliance
+              checks to ensure your goods move smoothly across the border.
+            </p>
+            <a href="#" class="service-link">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <img
+              src="images/nssf.png"
+              alt="NSSF Logo"
+              style="height: 120px; max-width: 100%; object-fit: contain"
+            />
+          </div>
+          <div class="service-content">
+            <h3>NSSF</h3>
+            <p>
+              We provide comprehensive support for NSSF registration and
+              compliance. Our team ensures your business meets all NSSF
+              requirements, including contributions and Monthly returns.
+            </p>
+            <a href="#" class="service-link">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <img
+              src="images/URSB.png"
+              alt="URSB Logo"
+              style="height: 120px; max-width: 100%; object-fit: contain"
+            />
+          </div>
+          <div class="service-content">
+            <h3>URSB</h3>
+            <p>
+              For businesses, we provide comprehensive support for URSB
+              registration, compliance, and annual returns. Our experts ensure
+              your business meets all legal requirements with ease.
+            </p>
+            <a href="#" class="service-link">
+              Learn more <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions about URA taxes in Uganda</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            What is the Uganda Revenue Authority (URA)?
+            <i class="fas fa-chevron-down faq-toggle"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              The Uganda Revenue Authority is the government agency responsible
+              for tax collection and enforcement in Uganda. URA administers all
+              national taxes including Income Tax, Value Added Tax (VAT), Pay As
+              You Earn (PAYE), Excise Duty, and Customs Duties.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What is EFRIS?
+            <i class="fas fa-chevron-down faq-toggle"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              EFRIS, or the Electronic Fiscal Receipting and Invoicing System,
+              is a digital system implemented by the Uganda Revenue Authority
+              (URA) to manage and track invoices and receipts for tax purposes.
+              It's not a tax itself, but rather a platform for issuing and
+              recording electronic invoices and receipts, particularly those
+              related to Value Added Tax (VAT). EFRIS aims to improve
+              transparency, efficiency, and accountability in tax administration
+              by streamlining the process and reducing revenue leakage.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            How do I register for a Tax Identification Number (TIN)?
+            <i class="fas fa-chevron-down faq-toggle"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              You can register for a TIN online via the URA portal or by
+              visiting any URA office. Registration requires:
+            </p>
+            <ul>
+              <li>Completed TIN application form</li>
+              <li>Copy of national ID or passport</li>
+              <li>Proof of business registration (for companies)</li>
+              <li>phone number and email</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What is VAT and who should pay it?
+            <i class="fas fa-chevron-down faq-toggle"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              VAT is a consumption tax charged on the value added to goods and
+              services. Businesses with annual taxable supplies exceeding UGX
+              150 million are required to register and pay VAT. VAT is currently
+              charged at 18% on most goods and services in Uganda.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            How can I file my taxes with URA?
+            <i class="fas fa-chevron-down faq-toggle"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Taxes can be filed:</p>
+            <ul>
+              <li>Online through the URA e-services portal</li>
+              <li>Through approved banks</li>
+              <li>At URA offices nationwide</li>
+              <li>Through licensed tax agents like our firm</li>
+            </ul>
+            <p>
+              Deadlines vary by tax type, but most monthly returns are due by
+              the 15th of the following month.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>TaxConsult</h3>
+          <p>
+            Your trusted partner for tax solutions in Uganda. We specialize in
+            URA tax compliance, planning, and dispute resolution.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Our Services</h3>
+          <ul class="footer-links">
+            <li><a href="#">Tax Compliance</a></li>
+            <li><a href="#">Tax Planning</a></li>
+            <li><a href="#">Tax Dispute Resolution</a></li>
+            <li><a href="#">Business Registration</a></li>
+            <li><a href="#">Tax Advisory</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+            <li><i class="fas fa-phone"></i> +256 785 230670</li>
+            <li><i class="fas fa-envelope"></i> taxissues.go@gmail.com</li>
+            <li><i class="fab fa-whatsapp"></i> +256 751 474334</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>
+          &copy; 2023 TaxConsult. All rights reserved. | Designed with Prime
+          Focus Uganda
+        </p>
+      </div>
+    </footer>
+
+    <!-- Questionnaire Modal -->
+    <div id="questionnaire-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2>Get Started / Learn More Questionnaire</h2>
+        <form id="questionnaire-form">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="service">Service of Interest:</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="Tax Compliance">Tax Clearance Certificate</option>
+            <option value="Business Registration">Business Registration</option>
+            <option value="Tax Advisory">Tax Advisory</option>
+            <option value="EFRIS">EFRIS</option>
+            <option value="Tax Filings">Tax Filings</option>
+            <option value="Tax Filings">NSSF Filings</option>
+            <option value="Tax Dispute Resolution">
+              Tax Dispute Resolution
+            </option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="question">Your Question / Message:</label>
+          <textarea id="question" name="question" rows="4" required></textarea>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="width: 100%; margin-top: 20px"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div
+      id="notification"
+      style="
+        display: none;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        z-index: 3000;
+        background: #109d69;
+        color: #fff;
+        padding: 18px 28px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        font-size: 1.1rem;
+      "
+    >
+      Thank you for your submission! We will contact you soon.
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("VQ7f7AFL5uAUeChEV"); // Replace with your EmailJS public key
+      })();
+    </script>
+    <script>
+      // Mobile Menu Toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // FAQ Toggle
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const target = document.querySelector(this.getAttribute("href"));
+
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: "smooth",
+            });
+
+            // Close mobile menu if open
+            navLinks.classList.remove("active");
+          }
+        });
+      });
+
+      // Header scroll effect
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)";
+          header.style.background = "rgba(255, 255, 255, 0.98)";
+        } else {
+          header.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)";
+          header.style.background = "rgba(255, 255, 255, 0.95)";
+        }
+      });
+
+      // Modal logic
+      const modal = document.getElementById("questionnaire-modal");
+      const closeBtn = document.querySelector(".modal-close");
+
+      // Open modal on "Get Started" and "Learn more" links
+      document.querySelectorAll(".btn-primary, .service-link").forEach((el) => {
+        el.addEventListener("click", function (e) {
+          e.preventDefault();
+          modal.style.display = "flex";
+        });
+      });
+
+      // Close modal
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      // Form submission
+      document.getElementById("questionnaire-form").onsubmit = function (e) {
+        e.preventDefault();
+
+        // Collect form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const service = document.getElementById("service").value;
+        const question = document.getElementById("question").value;
+
+        // Send via EmailJS
+        emailjs
+          .send("service_hn7a9h7", "template_tonqys9", {
+            from_name: name,
+            from_email: email,
+            phone: phone,
+            service: service,
+            message: question,
+          })
+          .then(
+            function () {
+              showNotification(
+                "Thank you for your submission! We will contact you soon."
+              );
+              modal.style.display = "none";
+              document.getElementById("questionnaire-form").reset();
+            },
+            function (error) {
+              showNotification("Submission failed. Please try again later.");
+            }
+          );
+      };
+
+      function showNotification(msg) {
+        const notification = document.getElementById("notification");
+        notification.textContent = msg;
+        notification.style.display = "block";
+        setTimeout(() => {
+          notification.style.display = "none";
+        }, 4000);
+      }
+
+      // WhatsApp send button logic removed because there is no element with id "whatsapp-send"
+    </script>
+  </body>
+</html>
